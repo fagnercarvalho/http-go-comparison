@@ -20,5 +20,5 @@ QUIC is still an experimental protocol and to allow requests to services that ar
 
 For Firefox go to `about:config` and toggle `network.http.http3.enabled` and increase `network.http.http3.recvBufferSize` to `2500000`.
 
-For Chrome go to `chrome://flags ` and toggle `Experimental QUIC protocol`.
+For Chrome go to `chrome://flags` and toggle `Experimental QUIC protocol`.
 
