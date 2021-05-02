@@ -10,6 +10,12 @@ Repository that exposes services in HTTP/1.1, HTTP/2 and HTTP/3 (new QUIC protoc
 docker-compose up -d
 ```
 
+> :warning: **Important**: Since all services use [self signed certificates](https://en.wikipedia.org/wiki/Self-signed_certificate) you need to bypass the certificate check in Chrome or Firefox.
+>
+> For Firefox, 
+
+
+
 After all containers start go to the client by browsing `http://localhost:8080`.
 
 To test, click in the button for the HTTP version you want to use. You should see the response from the service printed in the screen.
