@@ -10,7 +10,9 @@ Repository that exposes services in HTTP/1.1, HTTP/2 and HTTP/3 (new QUIC protoc
 docker-compose up -d
 ```
 
-After all container start go to the client by browsing `http://localhost:8080`.
+After all containers start go to the client by browsing `http://localhost:8080`.
+
+To test, click in the button for the HTTP version you want to use. You should see the response from the service printed in the screen.
 
 #### Notes
 
@@ -18,4 +20,5 @@ QUIC is still an experimental protocol and to allow requests to services that ar
 
 For Firefox go to `about:config` and toggle `network.http.http3.enabled` and increase `network.http.http3.recvBufferSize` to `2500000`.
 
-For Chrome go to `chrome://flags` and toggle `Experimental QUIC protocol`.
+For Chrome go to `chrome://flags ` and toggle `Experimental QUIC protocol`.
+
