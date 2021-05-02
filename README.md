@@ -10,10 +10,21 @@ Repository that exposes services in HTTP/1.1, HTTP/2 and HTTP/3 (new QUIC protoc
 docker-compose up -d
 ```
 
-> :warning: **Important**: Since all services use [self signed certificates](https://en.wikipedia.org/wiki/Self-signed_certificate) you need to bypass the certificate check in Chrome or Firefox.
+> :warning: **Important**: Since all services use [self signed certificates](https://en.wikipedia.org/wiki/Self-signed_certificate) you need to bypass the certificate check in Chrome and Firefox.
+> 
+> For Firefox, access:
+> 
+> - https://localhost:6123.
+> - https://localhost:6124.
+> - https://localhost:6125
+> 
+> And for each site click on 'Advanced' and then 'Accept the Risk and Continue'. 
+>  
+> 
+> For Chrome, access [chrome://flags/#allow-insecure-localhost](), enable the flag and restart your browser.
+> 
 >
-> For Firefox, 
-
+> You should be able to access http://localhost:8080 and test the services right after.
 
 
 After all containers start go to the client by browsing `http://localhost:8080`.
