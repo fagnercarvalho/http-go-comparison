@@ -1,0 +1,39 @@
+version: '3.4'
+services:
+  client:
+    build:
+      context: client
+    ports:
+      - "8080:8080"
+    depends_on:
+      - echo
+      - quic-go
+      - nginx
+
+  echo:
+    build: 
+      context: echo
+    hostname: echo
+    ports:
+      - "6122:6122"
+      - "6123:6123"
+      
+  quic-go:
+    build: 
+      context: quic-go
+    hostname: quic
+    ports:
+      - "6124:6124/tcp"
+      - "6124:6124/udp"
+
+  nginx:
+    image: ymuski/nginx-quic
+    volumes:
+      - ./nginx/config/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/certs:/opt/nginx/certs/
+    hostname: nginx
+    ports:
+      - "6125:6125/tcp"
+      - "6125:6125/udp"
+    depends_on:
+      - echo
